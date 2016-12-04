@@ -1,5 +1,4 @@
 const fs = require('fs')
-const print = require('./print')
 const deamon = require('./daemon')
 const Bus = require('./bus')
 
@@ -27,8 +26,8 @@ Command.prototype._commands = function (name) {
       \t help \t Display this help message
       `,
     cb: cmd => cmd
-      ? print(this._commands(cmd).helpMsg)
-      : print(this._value.helpMsg)
+      ? console.log(this._commands(cmd).helpMsg)
+      : console.log(this._value.helpMsg)
   }, {
     name: 'echo',
     helpMsg: 'usage: dlab echo <string>\n',
@@ -52,7 +51,7 @@ Command.prototype._commands = function (name) {
   const found = available.find(a => a.name === name)
   const fallback = {
     helpMsg: 'Command does not exist.',
-    cb: () => print('Command not found.')
+    cb: () => console.log('Command not found.')
   }
 
   return found

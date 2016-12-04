@@ -1,10 +1,15 @@
 ```bash
-npm install -g dlab
+# setup alias
 
-usage: dlab <command>
+cd cli
+DIR=$(pwd)
+echo 'alias dlab=node $DIR' >> ~/.bash_profile
+source ~/.bash_profile
 
-commands:
-start - start the dlab server
-end - close the dlab server
-echo <message> - log a message to the console
+# usage: dlab <command>
+
+# commands:
+# start - start the dlab server
+# end - close the dlab server
+# echo <message> - log a message to the console
 ```

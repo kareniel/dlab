@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "name": "chat",
+  "version": "0.0.0",
+  "description": "https://github.com/mafintosh/p2p-workshop",
+  "main": "server.js",
+  "dependencies": {
+    "duplex-json-stream": "^1.0.1",
+    "lookup-multicast-dns": "^1.0.3",
+    "register-multicast-dns": "^1.1.0",
+    "stream-set": "^1.1.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Jonathan Dupré",
+  "license": "GPL-3.0"
+}

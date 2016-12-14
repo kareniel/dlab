@@ -1,6 +1,6 @@
 const fs = require('fs')
 const deamon = require('./daemon')
-const Bus = require('./bus')
+const Bus = require('./daemon/bus')
 
 const json = JSON.parse(fs.readFileSync('package.json', 'utf8'))
 const version = json.version
